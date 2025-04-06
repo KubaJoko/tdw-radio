@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TDW Radio</title>
+<style>
+/* Skrócony CSS z projektu */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #000428, #004e92);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+</style>
+</head>
+<body>
+<div class="player-container">
+  <img src="logo.png" alt="Logo" style="width:200px;"/>
+  <p id="current-song">Ładowanie...</p>
+  <p id="next-song"></p>
+  <div id="visualizer"></div>
+  <p id="time-left">Pozostały czas: 0:00</p>
+  <input id="volume" type="range" min="0" max="1" step="0.01" value="1"/>
+  <p id="volume-display">Głośność: 100%</p>
+  <div class="controls">
+    <button id="start-button">▶️ Odtwórz</button>
+    <button onclick="toggleMute()">🔇</button>
+  </div>
+</div>
+<audio id="player"></audio>
+<script src="script.js"></script>
+</body>
+</html>
